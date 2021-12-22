@@ -14,3 +14,6 @@ txt_help = ("/help - View the list of commands available\n"
 
 txt_resources = ("Here is the link to Techne's archive of educational resources:\n"
     + "https://drive.google.com/drive/folders/17dshoDX6s12U6CPVZuJLHTjGlBi3fIeD?usp=sharing")
+
+# New Text for Keith
+txt_keith = ("Keith")
