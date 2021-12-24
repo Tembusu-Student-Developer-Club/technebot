@@ -29,5 +29,5 @@ def resources(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=txt.txt_resources)
 
 # Function for /keith
-def resources(update, context):
+def keith(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=txt.txt_keith)
