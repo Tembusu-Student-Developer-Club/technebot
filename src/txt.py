@@ -16,4 +16,4 @@ txt_resources = ("Here is the link to Techne's archive of educational resources:
     + "https://drive.google.com/drive/folders/17dshoDX6s12U6CPVZuJLHTjGlBi3fIeD?usp=sharing")
 
 # New Text for Keith
-txt_keith = ("Keith")
+txt_keith = "Keith"
