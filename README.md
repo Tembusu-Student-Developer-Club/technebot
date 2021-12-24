@@ -39,9 +39,3 @@ Afterwards, a simple /start command will begin the bot to start communicating wi
 ## Credits
 
 This project is currently being worked on under the Tembusu Student Developer Club (SDC).
-
-## Keiths edits
-
-Editing test
-
-hihi
