@@ -27,3 +27,7 @@ def contacts(update, context):
 # Function for /resources
 def resources(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=txt.txt_resources)
+
+# Function for /luqman
+def luqman(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="luqman")
