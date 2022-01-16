@@ -26,6 +26,7 @@ dispatcher.add_handler(CommandHandler('help', handler.bothelp))
 dispatcher.add_handler(CommandHandler('rules', handler.rules))
 dispatcher.add_handler(CommandHandler('contacts', handler.contacts))
 dispatcher.add_handler(CommandHandler('resources', handler.resources))
+dispatcher.add_handler(CommandHandler('junjie', handler.junjie))
 
 # Start the webhook process
 updater.start_webhook(listen = "0.0.0.0",
