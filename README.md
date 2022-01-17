@@ -25,10 +25,6 @@ Using this bot, students can borrow equipments from the MakerSpace easily, witho
 
 The command /loan is used to access this feature, and the command /checkloan can be used to check the loan status.
 
-## Installation & Development
-
-Users can run `main.py` script from their local machines (connected to the internet) to activate the bot.
-
 ## Activation
 
 Users can start using the bot by finding the bot on telegram with @Techne0_bot, or using this link:

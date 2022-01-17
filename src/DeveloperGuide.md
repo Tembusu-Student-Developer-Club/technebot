@@ -2,22 +2,23 @@
 
 ## Set up
 
-This bot is written in Python. As an editor, please make sure you have installed the following libraries using pip / pip3:
+This bot is written in JavaScript and NodeJS, primarily using the Telegraf module API. As an editor, please make sure you have installed the following libraries using the appropriate tool, like npm or yarn (E.g. `sudo npm install telegraf` in Unix):
 
-- telegram
-- python-telegram-bot
+- telegraf
+- express
 
-There are number of guides available online for installing python libraries on your system and CLI of choice.
+There are number of guides available online for installing NodeJS libraries on your system and GUI / CLI of choice.
 
 ## Overview
 
-This repository consists of the scripts for TechneBot, written in Python 3. The current plan is to migrate the script to use NodeJS instead, using the Telegraf API.
+This repository consists of the scripts for TechneBot, written in JavaScript. In the long term, we will overhaul the codebase
+to use TypeScript, which gives us enhanced flexibility, instead of JavaScript.
 
 The architecture for the TechneBot consists of three major components: Telegram, Database, and the Server.
 
-The script for the TechneBot is currently hosted on Heroku web servers. When a user interacts with the Bot, the server "wakes up" and starts the webhook process, which allows for the Bot to function on Telegram. 
+The script for TechneBot is currently hosted on Heroku web servers. When a user interacts with the Bot, the server "wakes up" and starts the webhook process, which allows for the Bot to function on Telegram. 
 
-The information that is logged through the Bot is planned to be stored in an external Database.
+The information that is logged through the Bot is planned to be stored in an external Database such as PostgreSQL Database.
 
 ## Upcoming Features
 
@@ -87,7 +88,7 @@ The full list of inventory is found here:
 Inventory List (View only):
 https://docs.google.com/spreadsheets/d/1ShAzqXTb991gljNOzhnHoTBz2SaNaZf-glEPz4YXFq4/edit?usp=sharing
 
-Due to gspread load limit, unfortunately, we may have to manually code the different equipments available. This is still under testing, and hopefully this is not the case since it would not be ideal to have to constantly update the codebase everytime a new equipment is introduced.
+Due to load limit, unfortunately, we may have to manually code the different equipments available. This is still under testing, and hopefully this is not the case since it would not be ideal to have to constantly update the codebase everytime a new equipment is introduced.
 
 The information collected is logged here, in the Techne Equipment Loan Records (View only):
 https://docs.google.com/spreadsheets/d/1SQepbLsa_cKe46A6ukQDjzcWXlJkTG-FTH5d1H11DGE/edit?usp=sharing
