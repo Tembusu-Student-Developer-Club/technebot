@@ -7,7 +7,7 @@ This bot is written in JavaScript and NodeJS, primarily using the Telegraf modul
 - telegraf
 - express
 
-There are number of guides available online for installing NodeJS libraries on your system and GUI / CLI of choice.
+There are number of guides available online for installing NodeJS modules on your system and GUI / CLI of choice.
 
 ## Overview
 
