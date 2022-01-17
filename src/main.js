@@ -1,5 +1,7 @@
-const { Telegraf } = require("telegraf");
+const Telegraf = require("telegraf");
+const express = require('express');
 const responses = require('./responses.js');
+const expressApp = express();
 
 const BOT_TOKEN = // TODO
 
