@@ -1,52 +1,65 @@
 const Telegraf = require("telegraf");
 const express = require('express');
 const responses = require('./responses.js');
-const expressApp = express();
 
-const BOT_TOKEN = // TODO
+// ENV variables, stored in Heroku for security purposes
+const TOKEN = process.env.TOKEN || '';
+const PORT = process.env.PORT || 3000;
+const URL = process.env.URL || 'https://tembusu-technebot.herokuapp.com';
 
-const bot = new Telegraf(BOT_TOKEN);
+// Start the bot and the express app using a Webhook process
+// Express is needed to link Telegraf with Heroku deployment
+const app = express();
+const bot = new Telegraf(TOKEN);
+bot.telegram.setWebhook(`${URL}/bot${TOKEN}`);
+app.use(bot.webhookCallback(`/bot${TOKEN}`));
 
 // Respond to /start
 bot.command('start', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.start, {
+        console.log(ctx.from);
+        bot.telegram.sendMessage(ctx.chat.id, responses.start, {
     })
 })
 
 // Respond to /boop
 bot.command('boop', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.boop, {
+        console.log(ctx.from)
+        bot.telegram.sendMessage(ctx.chat.id, responses.boop, {
     })
 })
 
 // Respond to /help
 bot.command('help', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.help, {
+        console.log(ctx.from)
+        bot.telegram.sendMessage(ctx.chat.id, responses.help, {
     })
 })
 
 // Respond to /rules
 bot.command('rules', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.rules, {
+        console.log(ctx.from)
+        bot.telegram.sendMessage(ctx.chat.id, responses.rules, {
     })
 })
 
 // Respond to /contacts
 bot.command('contacts', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.contacts, {
+        console.log(ctx.from)
+        bot.telegram.sendMessage(ctx.chat.id, responses.contacts, {
     })
 })
 
 // Respond to /resources
 bot.command('resources', ctx => {
-    console.log(ctx.from)
-    bot.telegram.sendMessage(ctx.chat.id, responses.resources, {
+        console.log(ctx.from)
+        bot.telegram.sendMessage(ctx.chat.id, responses.resources, {
     })
 })
 
-bot.launch();
+// Start the express app
+app.get('/', (req, res) => {
+  res.send('TESTING...!!!');
+});
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
